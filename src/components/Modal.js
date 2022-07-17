@@ -1,7 +1,7 @@
 import ReactDOM from 'react-dom'
 import './Modal.css'
 
-export default function Modal({ children, setShowModal, isSalesModal }) {
+export default function Modal({ children, isSalesModal }) {
 	return ReactDOM.createPortal((
 		<div className='modal-backdrop'>
 			<div className='modal' style={{ 
@@ -10,10 +10,6 @@ export default function Modal({ children, setShowModal, isSalesModal }) {
         		textAlign: "center"
 			}}>
 				{children}
-				<button 
-					className={isSalesModal? 'sales-btn' : ''} 
-					onClick={() => setShowModal(false)}
-				>Close</button>
 			</div>
 		</div>
 	), document.body)

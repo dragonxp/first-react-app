@@ -40,7 +40,7 @@ function App() {
 		{showEvent && <EventList events={events} handleClick={handleClick} />}
 
 		{showModal && 
-			<Modal setShowModal={setShowModal} isSalesModal={true}>
+			<Modal isSalesModal={true}>
 				<NewEventForm addEvent={addEvent} />
 			</Modal>
 		}
